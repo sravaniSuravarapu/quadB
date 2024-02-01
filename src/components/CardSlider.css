@@ -1,0 +1,28 @@
+.card-slider {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left:200px;
+    margin-right:200px;
+    margin-top:20px;
+}
+
+.card {
+    margin: 10px;
+    width: 40%; /* Adjust the width to make them smaller */
+    flex-basis: calc(33.333% - 20px); /* 3 cards per row initially */
+    box-sizing: border-box;
+    height:600px;
+}
+
+@media (max-width: 1200px) {
+    .card {
+        flex-basis: calc(50% - 20px); /* 2 cards per row for large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex-basis: calc(100% - 20px); /* 1 card per row for medium screens */
+    }
+}
